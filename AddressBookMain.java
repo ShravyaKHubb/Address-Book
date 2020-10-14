@@ -11,7 +11,7 @@ public class AddressBookMain {
         while (true) {
 
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Choose: 1.Add person\n 2.Edit person\n 3.Delete person\n 4.Sort alphabetically");
+            System.out.println("Choose: 1.Add person\n 2.Edit person\n 3.Delete person\n 4.Sort alphabetically\n 5.Sort by city, state or zip");
             int choice = scanner.nextInt();
             scanner.nextLine();
 
