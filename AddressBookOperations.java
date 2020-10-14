@@ -135,7 +135,6 @@ public class AddressBookOperations implements AddressBookInterface{
     public void sortAlphabetically() {
 
         Collections.sort(contacts, new SortByFirstName());
-        System.out.println("Data after Sort By Zip: ");
 
         for (Person person : contacts) {
 
