@@ -39,6 +39,9 @@ public class AddressBookMain {
 
                 case 6:
                     addressBookOperations.viewPersonByCityOrState();
+                    
+                default:
+                    System.out.println("Invalid input");
 
             }
 
