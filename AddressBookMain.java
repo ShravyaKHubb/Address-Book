@@ -35,6 +35,10 @@ public class AddressBookMain {
 
                 case 5:
                     addressBookOperations.sortByZipStateCity();
+                    break;
+                    
+                default:
+                    System.out.println("Invalid input");
 
             }
 
