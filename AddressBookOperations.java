@@ -101,6 +101,9 @@ public class AddressBookOperations implements AddressBookInterface{
                         newDetails = scanner.nextLine();
                         personInfo.phoneNumber = newDetails;
                         break;
+                        
+                    default:
+                        System.out.println("Invalid input");
 
                 }
 
