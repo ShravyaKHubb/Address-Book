@@ -101,6 +101,9 @@ public class AddressBookOperations implements AddressBookInterface{
                         newDetails = scanner.nextLine();
                         personInfo.phoneNumber = newDetails;
                         break;
+                        
+                    default:
+                        System.out.println("Invalid input");
 
                 }
 
@@ -161,6 +164,10 @@ public class AddressBookOperations implements AddressBookInterface{
 
             case 3:
                 Collections.sort(contacts, new SortByZip());
+                break;
+                
+            default:
+                System.out.println("Invalid input");
 
         }
 
