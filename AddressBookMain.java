@@ -31,6 +31,10 @@ public class AddressBookMain {
 
                 case 4:
                     addressBookOperations.sortAlphabetically();
+                    break;
+                    
+                default:
+                    System.out.println("Invalid input");
 
             }
 
