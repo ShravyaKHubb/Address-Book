@@ -5,14 +5,6 @@ public class AddressBookMain {
 
     //Welcome to Address Book Program
 
-    static ArrayList<Person> contacts;
-
-    public AddressBookMain() {
-
-        contacts = new ArrayList<>();
-
-    }
-
     public static void main(String args[]) {
 
         Scanner scanner = new Scanner(System.in);
@@ -31,7 +23,6 @@ public class AddressBookMain {
         System.out.println("Enter phone number: ");
         String phoneNumber = scanner.nextLine();
         Person personInfo = new Person(firstName, lastName, address, city, state, zip, phoneNumber);
-        contacts.add(personInfo);
         System.out.println("Contact added!");
 
     }
