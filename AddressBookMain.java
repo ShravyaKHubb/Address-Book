@@ -15,10 +15,12 @@ public class AddressBookMain {
         AddressBookMain addressBookMain = new AddressBookMain();
 
         while (true) {
+            
             Scanner scanner = new Scanner(System.in);
             System.out.println("Choose: 1.Add person\n 2.Edit person\n 3.Delete person");
             int choice = scanner.nextInt();
             scanner.nextLine();
+            
             switch (choice) {
 
                 case 1:
@@ -32,8 +34,14 @@ public class AddressBookMain {
                 case 3:
                     addressBookMain.deletePerson();
                     break;
+                    
+                default:
+                    System.out.println("Invalid input");
+                    
             }
+            
         }
+        
     }
 
     public void addPerson() {
@@ -51,30 +59,46 @@ public class AddressBookMain {
         String zip = scanner.nextLine();
         System.out.println("Enter phone number: ");
         String phoneNumber = scanner.nextLine();
+        
         for (int i = 0; i < contacts.size(); i++) {
+            
             personInfo = contacts.get(i);
+            
             if (firstName.equals(personInfo.firstName) && lastName.equals(personInfo.lastName)) {
+                
                 System.out.println("Person already exists");
+                
             } else {
+                
                 personInfo = new Person(firstName, lastName, address, city, state, zip, phoneNumber);
                 contacts.add(personInfo);
                 System.out.println("Contact " + firstName + " " + lastName + " added!");
+                
             }
+            
         }
+        
     }
 
     public void editPerson() {
+        
         String newDetails;
         System.out.print("Enter first name: ");
         firstName = scanner.nextLine();
         System.out.println("Enter last name: ");
         lastName = scanner.nextLine();
+        
         for (int i = 0; i < contacts.size(); i++) {
+            
             personInfo = contacts.get(i);
+           
             if (firstName.equals(personInfo.firstName) && lastName.equals(personInfo.lastName)) {
+                
                 System.out.println("Edit: 1.Address\n 2.City\n 3.State\n 4.Zip\n 5.Phone number ");
                 int editChoice = scanner.nextInt();
+                
                 switch (editChoice) {
+                        
                     case 1:
                         System.out.println("Enter new address: ");
                         scanner.nextLine();
@@ -109,22 +133,38 @@ public class AddressBookMain {
                         newDetails = scanner.nextLine();
                         personInfo.phoneNumber = newDetails;
                         break;
+                        
+                    default:
+                        System.out.println("Invalid input");
+                        
                 }
+                
             }
+            
         }
+        
     }
 
     public void deletePerson() {
+        
         for (int i = 0; i < contacts.size(); i++) {
+            
             personInfo = contacts.get(i);
             System.out.println("Enter first name: ");
             firstName = scanner.nextLine();
             System.out.println("Enter last name: ");
             lastName = scanner.nextLine();
+            
             if (firstName.equals(personInfo.firstName) && lastName.equals(personInfo.lastName)) {
+                
                 contacts.remove(i);
+                
             }
+            
         }
+        
         System.out.println("Contact " + firstName + " " + lastName  + " deleted!");
+        
     }
+    
 }
